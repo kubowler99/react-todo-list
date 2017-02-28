@@ -4,7 +4,15 @@ class TodoList extends Component {
 
     render() {
         return (
-            <div>This is the todo list</div>
+            <ol>
+
+                {
+                    this.props.todos.map((todo) => {
+                        return <li key={todo.id}>{todo.text}</li>
+                    })
+                }
+
+            </ol>
         )
     }
 }
